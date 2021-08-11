@@ -1,0 +1,40 @@
+#profile-block{
+    border: 0.2vw solid orange;
+    box-shadow: 0.2vw 0.2vw 0.2vw grey;
+    padding: 0.5vw;
+}
+
+#profile-block img{
+    height: 10vw;
+    width: 10vw;
+    border-radius: 50%;
+}
+
+#profile-body p{
+    font-family: Cambria;
+    color: #333;
+}
+
+.span-title{
+    font-family: serif;
+    font-size: 1.6vw;
+    color: purple;
+}
+
+#profile-update{
+    margin-top: 2vw;
+}
+
+#profile-update button{
+    border: 0.2vw solid rgb(92, 16, 58);
+    font-family: Cambria;
+    background-color: rgb(121, 25, 78);
+    color: white;
+    padding: 0.2vw;
+    width: 6vw;
+}
+
+#profile-update button:hover{
+    color: orange;
+    font-weight: bold;
+}

@@ -1,0 +1,57 @@
+{% extends 'blog/base.html' %}
+
+{% load static %}
+
+{% block link %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/user-posts.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <h2 id="userpost-title"> Posts by {{view.kwargs.username }} (<span>{{ page_obj.paginator.count }}</span>) </h2>
+    
+    {% for post in posts %}
+       <article class="content-block">
+           
+           <img id="userpost-img" src = "{{ post.author.profile.image.url }}"/>
+
+           <div>
+               <a id="auth-name" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
+               <small id="date-posted">{{ post.date_posted|date:"F d, Y" }}</small>
+           </div>
+
+           <h2>
+               <a class="title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a>
+           </h2>
+
+           <p class="content">{{ post.content }}</p>
+
+       </article>
+    {% endfor %}
+
+
+    <div id="pager-container">   
+        {% if is_paginated %}
+
+        {% if page_obj.has_previous %}
+                <a class="pager" href="?page=1">First</a>
+                <a class="pager" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+        {% endif %}
+
+        {% for num in page_obj.paginator.page_range %}
+                {% if page_obj.number == num %}
+                    <a class="pager current-page" href="?page={{ num }}">{{ num }}</a>
+                {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                    <a class="pager" href="?page={{ num }}">{{ num }}</a>
+                {% endif%}
+        {% endfor %}
+        
+        {% if page_obj.has_next %}
+                <a class="pager" href="?page={{ page_obj.next_page_number }}">Next</a>
+                <a class="pager" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+        {% endif %}
+
+        {% endif %}
+    </div>
+
+   
+{% endblock %}

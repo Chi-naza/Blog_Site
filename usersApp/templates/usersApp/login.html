@@ -1,0 +1,43 @@
+{% extends 'blog/base.html' %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block link %}
+    <link rel="stylesheet" type="text/css" href="{% static 'usersApp/login.css' %}"/>
+    <style>
+        .content-section{
+            top: 2vw;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div>
+        <form method="POST">
+            {% csrf_token%}
+            <fieldset>
+
+                <legend>Log In</legend>
+
+                {{ form|crispy }}
+
+                <div id="login-div">
+                    <button type="submit">Log In</button>
+                    <small>
+                        <a title="click" href="{% url 'password_reset' %}">Forgot Password?</a>
+                    </small>
+                </div>
+            
+                <div id="needs-div">
+                    <small>Need An Account?
+                        <a href="{% url 'register' %}">Sign Up Now</a>
+                    </small>
+                </div>
+
+            </fieldset>
+        </form>  
+
+    </div>
+{% endblock %}

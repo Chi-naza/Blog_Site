@@ -1,0 +1,58 @@
+{% extends 'blog/base.html' %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block link %}
+    <link rel="stylesheet" type="text/css" href="{% static 'usersApp/profile.css' %}"/>
+{% endblock%}
+
+{% block content %}
+    <div class="content-block">
+
+        <div id="profile-block">
+            <img src="{{ user.profile.image.url }}" />
+
+            <div id="profile-body">
+                <p>
+                    <span class="span-title">Username :</span> {{ user.username }}
+                </p>
+
+                <p>
+                    <span class="span-title">Email :</span> {{ user.email }}
+                </p>
+
+                <p>
+                    <span class="span-title">Current City :</span> {{ user.profile.current_city }}
+                </p>
+
+                <p>
+                    <span class="span-title">Occupation :</span> {{ user.profile.occupation }}
+                </p>
+
+                <p> 
+                    <span class="span-title">Hobby :</span> {{ user.profile.hobby }}
+                </p>
+
+            </div>
+        </div>
+
+        <form method="POST" enctype = "multipart/form-data">
+            {% csrf_token%}
+
+            <fieldset>
+
+                <legend>Profile Info</legend>
+                {{ u_form|crispy }}
+                {{ p_form|crispy }}
+
+                <div id="profile-update">
+                    <button type="submit">Update</button>
+                </div>
+
+            </fieldset>
+            
+        </form>
+    </div>
+{% endblock %} 

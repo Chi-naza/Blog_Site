@@ -1,0 +1,13 @@
+#about-page{
+    text-align: center;
+    box-shadow: 0.1vw 0.1vw 0.1vw grey;
+}
+
+#about-page h2{
+    color: rgb(94, 91, 91);
+    font-size: 2vw;
+}
+
+#about-page p{
+    color: green;
+}

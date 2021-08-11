@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+
+{% load static %}
+
+{% block link %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/post-detail.css' %}"/>
+{% endblock %}
+
+{% block content %}
+<article class="content-block">
+    
+    <img id= "detail-img" src = "{{ object.author.profile.image.url }}"/>
+    <div>
+        <a id="auth-name" href="{% url 'user-posts' object.author.username %}">{{ object.author }}</a>
+        <small id="date-posted">{{ object.date_posted|date:"F d, Y" }}</small>
+    </div>
+    <h2 id ="title">{{ object.title }}</h2>
+    <p id="content">{{ object.content }}</p>
+
+    {% if object.author == user %}
+        <div id="up-del">
+            <button> <a href="{% url 'post-update' object.id %}">Update</a> </button>
+            <button> <a href="{% url 'post-delete' object.id %}">Delete</a> </button>
+        </div>
+    {% endif %}
+</article>
+{% endblock %}

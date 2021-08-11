@@ -1,0 +1,54 @@
+#blog-img{
+    height: 8vw;
+    width: 8vw;
+    border-radius: 40%;
+}
+
+#auth-name{
+    color: #333;
+    font-family: Cambria;
+}
+
+#auth-name:hover{
+    color: red;
+    text-decoration: none;
+}
+
+#date-posted{
+    font-family: fantasy;
+    color: green;
+}
+
+.title{
+    color: #4b4848;
+}
+
+.title:hover{
+    color: #428bca;
+    text-decoration: none;
+}
+
+.content{
+    white-space: pre-line;
+    text-align: justify;
+}
+
+#pager-container{
+    margin-top: 1.5vw;
+    text-align: center;
+}
+
+.pager{
+    border: 0.2vw solid rgb(155, 2, 2);
+    background-color: rgb(224, 111, 224);
+    color: white;
+    font-family: Cambria;
+}
+
+.pager:hover{
+    font-weight: bold;
+}
+
+.current-page{
+    background-color: red;
+}

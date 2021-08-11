@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% load static %}
+
+{% block link %} 
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/about.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <div id="about-page" class="content-block">
+        <h2>About</h2>
+        <p>
+            Ugwuoke Chinaza James is a Computer Scientist and a programmer. 
+            He powers this site through his professional services. A site for those that have an event to discuss!
+        </p>                        
+    </div>
+{% endblock %}

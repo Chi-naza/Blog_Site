@@ -1,0 +1,50 @@
+#detail-img{
+    height: 15vw;
+    width: 15vw;
+    border-radius: 30%;
+ }
+
+ #auth-name{
+    color: #333;
+    font-family: Cambria;
+}
+
+#auth-name:hover{
+    color: red;
+    text-decoration: none;
+}
+
+#date-posted{
+    font-family: fantasy;
+    color: green;
+}
+
+#up-del{
+    margin-top: 2vw;
+    text-align: center;
+}
+
+#up-del button{
+    border: 0.1vw solid blue;
+    background-color: wheat;
+}
+
+#up-del button a{
+    text-decoration: none;
+    color: red;
+    font-family: cursive;
+}
+
+#up-del button a:hover{
+    font-weight: bold;
+}
+
+#title{
+    color: #4b4848;
+}
+
+#content{
+    white-space: pre-line;
+    text-align: justify;
+    font-family: Tahoma;
+}

@@ -1,0 +1,36 @@
+{% extends 'blog/base.html' %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block link %}
+    <link rel="stylesheet" type="text/css" href="{% static 'usersApp/registration.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+
+            {% csrf_token%}
+            <fieldset id="Reg">
+
+                <legend>Join Today</legend>
+
+                {{ form|crispy }}
+
+                <div id="signUp">
+                    <button type="submit">Sign Up</button>
+                </div>
+            
+                <div id="already-account">
+                    <small>Already have an account?
+                        <a id="signIn" href="{% url 'login' %}">Sign In</a>
+                    </small>
+                </div>
+
+            </fieldset>
+        </form>
+
+    </div>
+{% endblock %}

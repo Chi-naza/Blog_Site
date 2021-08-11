@@ -1,0 +1,38 @@
+#cancel-del{
+    margin-top: 2vw;
+    text-align: center;
+}
+
+#cancel-del button{
+    border: 0.2vw solid purple;
+}
+
+#cancel-del button a{
+    text-decoration: none;
+    color: black;
+    font-family: cursive;
+}
+
+#cancel-del button a:hover{
+    font-weight: bold;
+}
+
+#yes-del{
+    text-decoration: none;
+    color: white;
+    font-family: cursive;
+    background-color: red;
+
+}
+
+#yes-del:hover{
+    font-weight: bold;
+}
+
+h2{
+    font-family: Tahoma;
+}
+
+span{
+    color: rgb(223, 17, 17);
+}

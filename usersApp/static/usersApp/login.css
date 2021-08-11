@@ -1,0 +1,47 @@
+#login-div{
+    margin-top: 1vw;
+}
+
+#login-div button{
+    border: 0.2vw solid rgb(92, 16, 58);
+    font-family: Cambria;
+    background-color: rgb(121, 25, 78);
+    width: 8%;
+    color: white;
+}
+
+#login-div button:hover{
+    color: orange;
+    font-weight: bold;
+}
+
+#login-div small{
+    margin-left: 0.5vw;
+}
+
+#login-div small a{
+    font-style: oblique;
+    font-family: Cambria;
+    color: blue;
+}
+
+#login-div small a:hover{
+    text-decoration: none;
+}
+
+#needs-div{
+    margin-top: 0.5vw;
+}
+
+#needs-div small{
+    font-family: Cambria;
+    font-weight: bold;
+}
+
+#needs-div small a{
+    color: red;
+}
+
+#needs-div small a:hover{
+    color: green;
+}

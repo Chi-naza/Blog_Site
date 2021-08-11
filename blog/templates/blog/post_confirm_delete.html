@@ -1,0 +1,28 @@
+{% extends 'blog/base.html' %}
+
+{% load static %}
+
+{% block link %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/post-confirm-delete.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token%}
+            <fieldset>
+                <legend>Delete Post</legend>
+
+                <h2>Are you sure you want to delete the post : <span>{{ object.title}}</span> ? </h2>
+
+                <div id="cancel-del">
+                    <button id="yes-del" type="submit">Yes, Delete</button>
+                    <button type ="submit">
+                        <a href = "{% url 'post-detail' object.id %}">Cancel</a>
+                    </button>
+                </div>
+
+            </fieldset>
+        </form>   
+    </div>
+{% endblock %}

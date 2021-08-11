@@ -1,0 +1,18 @@
+#create-post{
+    margin-top: 1vw;
+}
+
+#create-post button{
+    border: 0.2vw solid rgb(92, 16, 58);
+    font-family: Cambria;
+    background-color: rgb(121, 25, 78);
+    color: white;
+    padding: 0.2vw;
+    width: 6vw;
+}
+
+
+#create-post button:hover{
+    color: orange;
+    font-weight: bold;
+}

@@ -1,0 +1,27 @@
+#logout{
+    text-align: center;
+    color: rgb(92, 16, 58);
+    font-size: 2.5vw;
+}
+
+#login-again{
+    text-align: center;
+}
+
+#login-again small{
+    text-align: center;
+    border: 0.2vw solid rgb(92, 16, 58);
+    font-family: Cambria;
+    background-color: rgb(121, 25, 78)
+}
+
+#login-again small a{
+    text-decoration: none;
+    color: white;
+    padding: 2vw;
+}
+
+#login-again small a:hover{
+    color: orange;
+    
+}

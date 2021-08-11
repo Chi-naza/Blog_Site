@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% if title %}
+        <title> Django Blog - {{title}} </title>
+    {% else %}
+        <title> Django Blog </title>
+    {% endif %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/base.css' %}" />
+
+    {% block link %}  {% endblock %}
+    
+</head>
+
+<body>
+
+    <section id="FB">
+        
+        <div id="header">
+            <h1>EVENT POSTERS' WEBSITE</h1>            
+            <span id="about-home">
+                <a href="{% url 'blog-home' %}">Home</a>
+                <a href="{% url 'blog-about' %}">About</a>
+            </span>
+            <!-- Navbar Right Side -->
+            <nav id="nav">
+                {% if user.is_authenticated %}
+                    <a href="{% url 'logout' %}">Logout</a>
+                    <a href="{% url 'profile' %}">Profile</a>
+                    <a href="{% url 'post-create' %}">New Post</a>
+                {% else %}
+                    <a href="{% url 'login' %}">Login</a>
+                    <a href="{% url 'register' %}">Register</a>
+                {% endif %}
+            </nav>
+        </div>
+
+        <main role="main" id="body">
+            
+            <div id="right">
+                {% if messages %}
+                    {% for message in messages %}
+                        <div id="message-alert">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                {% block content %}   {% endblock %}
+            </div>
+    
+            <div id="left" class="events-bar">
+                <div>
+                    <h3>Events bar</h3>
+                    <p>You can put any information here you'd like.</p>
+                    <ul class="list-group">
+                        <li>Latest Posts</li>
+                        <li>Announcements</li>
+                        <li>News</li>
+                        <li>Entertainment</li>
+                        <li>Other events</li>
+                    </ul>
+                </div>
+            </div>
+
+        </main>
+
+        <div id="footer">
+            <p>Copyright - Event Posters 2021 </p>
+        </div>
+
+    </section>
+
+</body>
+
+</html>

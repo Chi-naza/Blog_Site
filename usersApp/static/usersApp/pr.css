@@ -1,0 +1,19 @@
+#psw-reset{
+    margin-top: 0.5vw;
+}
+
+#psw-reset button{
+    margin-top: 1vw;
+    text-align: center;
+    border: 0.2vw solid rgb(92, 16, 58);
+    font-family: Cambria;
+    background-color: rgb(121, 25, 78);
+    color: white;
+    padding: 0.3vw;
+    border-radius: 10%;
+}
+
+#psw-reset button:hover{
+    color: orange;
+    padding: 0.4vw;
+}

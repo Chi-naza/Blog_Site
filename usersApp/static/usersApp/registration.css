@@ -1,0 +1,31 @@
+#signUp{
+    margin-top: 1.5vw;
+}
+
+#signUp button{
+    border: 0.2vw solid rgb(92, 16, 58);
+    font-family: Cambria;
+    background-color: rgb(121, 25, 78);
+    width: 8%;
+    color: white;
+}
+
+#signUp button:hover{
+    color: orange;
+    font-weight: bold;
+}
+
+#already-account{
+    margin-top: 0.6vw;
+    font-family: Cambria;
+    font-weight: bold;
+}
+
+#signIn{
+  color: firebrick;  
+}
+
+#signIn:hover{
+  text-decoration: none;
+  color:blue;  
+}
